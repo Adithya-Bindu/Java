@@ -1,0 +1,547 @@
+                                                                JAVA
+                                                            ------------
+
+Java Introduction
+-----------------
+Java was developed by James Gosling and released in 1994. It easily runs on multiple platforms such as Windows, Linux, and MacOS. 
+Initially, the releases of Java were numbered as version 1.0, 1.1., 1.2, and so on. Now, the version is represented as “Java 2” for
+JDK 1.2 and above.
+
+Java is quite popular for Write Once, Run Anywhere(WORA). Also, Java comes with a compiler and interpreter. Java came as an improvement 
+to C++ and removed complicated features. It is said to be based on C++ and considered a “pure” object-oriented language since it only
+deals with Object Oriented Programming (OOP).
+
+
+Features of Java
+----------------
+Here are the features of Java : 
+
+1. Architecture Neutral/(WORA) feature
+Just compile your Java program and take it to another operating system. The same program works in another operating system as well
+without the need of recompiling it. This is why it is called “Write Once, Run Anywhere, Anytime, Forever”.
+
+2. Security
+Java programs are secure since they get compiled first into byte code, which leads to their verification.
+
+3. Auto Garbage Collection
+Java comes with an automatic garbage collector, which makes the memory more efficient by reclaiming memory for reuse. In C++, garbage 
+collection isn’t automatic, so we use the delete() function. But in Java, there is no need to use any function, since garbage collector
+work automatically being part of JVM.
+
+4. Multi-threading
+Java comes with the multi-threading concept, which makes the program quite effective, unlike single-threading. You can easily execute 
+multiple threads simultaneously with Java.
+
+5. Pure Object Oriented Language
+Java deals with Object Oriented Programming Language, so it has all the concepts of object-oriented such as,
+
+* Classes: A class is a blueprint consisting of data members and member functions.
+* Objects: An object is an instance of a class.
+* Abstraction: Abstraction only shows the important details and hides what isn’t necessary.
+* Polymorphism: Polymorphism means “poly + morphos” i.e. many forms. It is divided into Static Binding and Dynamic Binding.
+* Inheritance: Inheritance is when you create a new class from the existing class. Here, new class in the Derived Class, whereas the
+existing class is the Base class.
+
+
+Java Program Execution Flow
+---------------------------
+1. Write code in a file like HelloWorld.java.
+2. The Java Compiler "javac" compiles it into bytecode "HelloWorld.class".
+3. The JVM (Java Virtual Machine) reads the .class file and interprets the bytecode.
+4. JVM converts bytecode to machine readable code i.e. "binary" (001001010) and then execute the program.
+
+
+Naming Conventions in Java
+--------------------------
+1. Java uses standard naming rules that make the code easier and improves the readability.
+2. In Java, the class names start with a capital letter for example, HelloWorld. Method and variable names start with a lowercase letter
+    and use camelCase like printMessage.
+3. And the constants are written in all uppercase letters with underscores like MAX_SIZE
+
+
+Java Development Environment
+----------------------------
+To run Java on your machine, you first need to set up the Java environment properly. This includes configuring the required environment
+variables (such as PATH and JAVA_HOME).
+
+You can refer to Setting up Environment Variables For Java article for a step-by-step guide on setting up Java environment variables.
+
+The development environment of Java consists of three components mainly:
+
+1. JDK (Java Development Kit): JDK = JRE + Development Tools + javaC(java Compailer). It is required for developing Java applications
+2. JRE (Java Runtime Environment): JRE = JVM + ClassLibraries + Other components needed to run Java applications.
+3. JVM (Java Virtual Machine): JVM = Class Loader + Bytecode Verifier + Java Execution Engine.
+JVM is the engine that runs Java programs. It converts Java bytecode (compiled code) into machine code
+(understandable by the OS).
+4. JEE (Java Execution Engine) = JIT (Justintime compiler) + Java interpreter.
+
+
+Java Basic Syntax
+-----------------
+Before writing complex programs, it is important to understand the basic syntax of Java. The syntax defines the rules and structure of
+how Java code is written and executed. Every Java program is built using classes, methods, and statements.
+
+Java program has .java extension. The name of the file should match the class name. Both file name and class name should be the same.
+
+Example:
+
+public class HelloWorld {
+    public static void main(String[] args)
+    {
+        System.out.println("Hello, World");
+    }
+}
+
+Output
+Hello, World
+
+Explanation:
+
+public class HelloWorld: Defines a class named HelloWorld.
+public static void main(String[] args): The entry point of the program; execution starts here.
+System.out.println("Hello, World"): Prints the text "Hello, World" followed by a new line.
+
+
+Comments in Java
+----------------
+// - Single line Comments.
+/* Multiple lines of comments */ - Multi-line comments.
+
+
+Ouput/printing
+--------------
+System.out.print(""); - This will print the output to console and the cursor will stand in the same line.
+System.out.println(""); - This also print the output to console and the cursor will move down to the new line.
+
+
+Data Type in Java
+-----------------
+Data types specify the type of values a variable can hold. They define the size, range and nature of data stored in memory. 
+Java has two main categories of data types:
+
+* Primitive: byte, short, int, long, float, double, char, boolean
+
+* Non-Primitive: String, Arrays, Classes, Interfaces, Objects
+
+
+Example: 
+
+public class DataTypesDemo {
+    public static void main(String[] args) {
+​
+        // -------- Primitive Data Types --------
+        byte b = 100;              // 1 byte
+        short s = 30000;           // 2 bytes
+        int i = 100000;            // 4 bytes
+        long l = 10000000000L;     // 8 bytes
+​
+        float f = 3.14f;           // 4 bytes (32 bits)
+        double d = 3.14159265359;  // 8 bytes (64 bits)
+
+        Note: The default data type of decimal number in java is double.
+​
+        char c = 'A';              // 2 bytes (Unicode character)
+
+        Note : In java, a char is always written between single quotes - for example : 'A','3', or '$'. This differentiate a single 
+                character 'A' from a String "A".
+
+        boolean flag = true;       // 1 bit
+​
+        // -------- Non-Primitive Data Types --------
+        String str = "Hello, Java"; // String (class in Java)
+        int[] arr = {1, 2, 3, 4, 5}; // Array
+        Integer wrapperInt = Integer.valueOf(50); // Wrapper class example
+        StringBuilder sb = new StringBuilder("Java"); // Class object
+​
+        // -------- Output --------
+        System.out.println("byte: " + b);
+        System.out.println("short: " + s);
+        System.out.println("int: " + i);
+        System.out.println("long: " + l);
+        System.out.println("float: " + f);
+        System.out.println("double: " + d);
+        System.out.println("char: " + c);
+        System.out.println("boolean: " + flag);
+​
+        System.out.println("String: " + str);
+        System.out.print("Array: ");
+        for (int num : arr) {
+            System.out.print(num + " ");
+        }
+        System.out.println();
+​
+        System.out.println("Wrapper Integer: " + wrapperInt);
+        System.out.println("StringBuilder: " + sb);
+    }
+}
+
+Output:
+
+byte: 100
+short: 30000
+int: 100000
+long: 10000000000
+float: 3.14
+double: 3.14159265359
+char: A
+boolean: true
+String: Hello, Java
+Array: 1 2 3 4 5 
+Wrapper Integer: 50
+StringBuilder: Java
+
+
+Type Casting
+-------------
+Type casting is the process of converting a variable from one data type into another in programming. It allows a variable of one type to
+be treated as another type, either automatically(implicit casting) or manually (explicit casting).
+
+1. Implicit Casting (Widening Conversion)
+
+    Widening Casting (automatic) - converting a smaller type to a larger type size
+    byte -> short -> char -> int -> long -> float -> double
+
+2. Explicit Casting (Narrowing Conversion)
+
+    Narrowing Casting (manual) - converting a larger type to a smaller type size
+    double -> float -> long -> int -> char -> short -> byte
+
+
+Implicit/Widening Conversion:
+
+Widening casting is done automatically when passing a smaller size type into a larger size type.This works because there is no risk of 
+losing information. 
+
+For example, an int value can safely fit inside a double:
+
+int myInt = 9;
+double myDouble = myInt; // Automatic casting: int to double
+
+System.out.println(myInt);    // Outputs 9
+System.out.println(myDouble); // Outputs 9.0
+
+
+Explicit/Narrowing Casting:
+
+Narrowing casting must be done manually by placing the type in parentheses () in front of the value.
+
+This is required because narrowing may result in data loss (for example, dropping decimals when converting a double to an int):
+
+Example
+double myDouble = 9.78d;
+int myInt = (int) myDouble; // Manual casting: double to int
+
+System.out.println(myDouble); // Outputs 9.78
+System.out.println(myInt);    // Outputs 9
+
+
+
+Variables In Java
+------------------
+
+Variables are containers to store data in memory. Each variable has a name, type and value. It is the basic unit of storage in a program.
+
+Java has 4 types of variables:
+
+1. Local Variables: Declared inside a method, constructor, or block. Accessible only within that block.
+
+2. Instance Variables: Declared inside a class but outside any method. Each object of the class has its own copy.
+
+3. Static Variables: Declared with the static keyword inside a class. Shared by all objects of the class.
+
+4. Final Variables: Declared with final keyword. Value cannot be changed once assigned.
+
+Example:
+
+public class VariablesDemo {
+
+    // Instance variable (belongs to each object)
+    int instanceVar = 10;
+
+    // Static variable (shared across all objects of the class)
+    static String staticVar = "I am static";
+
+    public void showVariables() {
+        // Local variable (declared inside a method)
+        int localVar = 5;
+
+        System.out.println("Instance Variable: " + instanceVar);
+        System.out.println("Static Variable: " + staticVar);
+        System.out.println("Local Variable: " + localVar);
+    }
+
+    public static void main(String[] args) {
+        // Creating object
+        VariablesDemo obj1 = new VariablesDemo();
+        obj1.showVariables();
+
+        // Accessing static variable directly using class name
+        System.out.println("Accessing Static Variable via class: " + VariablesDemo.staticVar);
+    }
+}
+
+Output:
+
+Instance Variable: 10
+Static Variable: I am static
+Local Variable: 5
+Accessing Static Variable via class: I am static
+
+
+Keywords in Java
+----------------
+Keywords are reserved words in Java that have a predefined meaning. They cannot be used as variable names, class names or identifiers.
+
+Examples: new, package, private, protected, public, return, short, static, etc.
+
+
+Operators in Java
+-----------------
+
+Operators are symbols that perform specific operations on one or more operands (variables or values). They are used to perform 
+calculations, comparisons, logical operations and manipulate data.
+
+They are basically of 7 types:
+
+* Arithmetic Operators: +, -, *, /, %
+* Relational Operators: ==, !=, >, <, >=, <=
+* Logical Operators: &&, ||, !
+* Assignment Operators: =, +=, -=, *=, /=, %=
+* Unary Operators: +, -, ++, --, !
+* Ternary Operator: condition ? value_if_true : value_if_false
+* Bitwise Operators: &, |, ^, ~, <<, >>, >>>
+
+Example:
+
+public class SimpleOperatorsDemo {
+    public static void main(String[] args) {
+        int a = 10, b = 3;
+
+        // Arithmetic Operators
+        System.out.println("a + b = " + (a + b));  // Addition
+        System.out.println("a - b = " + (a - b));  // Subtraction
+
+        // Relational Operator
+        System.out.println("a > b ? " + (a > b));  // Greater than
+
+        // Logical Operator
+        boolean x = true, y = false;
+        System.out.println("x && y = " + (x && y));  // Logical AND
+
+        // Assignment Operator
+        a += 5;  // a = a + 5
+        System.out.println("a after += 5 : " + a);
+
+        // Ternary Operator
+        int max = (a > b) ? a : b;
+        System.out.println("Maximum = " + max);
+
+        // Unary Operator
+        // Bitwise Operator
+    }
+}
+
+Output:
+
+a + b = 13
+a - b = 7
+a > b ? true
+x && y = false
+a after += 5 : 15
+Maximum = 15
+
+
+Java Operator Precedence
+------------------------
+When a calculation contains more than one operator, Java follows order of operations rules to decide which part to calculate first.
+
+Here are some common operators, from highest to lowest priority:
+
+1 -  () - Parentheses
+2 -  *, /, % - Multiplication, Division, Modulus
+3 -  +, - - Addition, Subtraction
+4 -  >, <, >=, <= - Comparison
+5 -  ==, != - Equality
+6 -  && - Logical AND
+7 -  || - Logical OR
+8 -  = - Assignment
+
+
+Decision Making (Control Statements) in Java
+--------------------------------------------
+Decision-making (or control statements) are used to execute different blocks of code based on certain conditions. They allow aprogram
+to choose a path of execution depending on whether a condition is true or false.
+
+1. if: Executes a block if a condition is true.
+
+2. if-else: Chooses between two blocks based on a condition. Executes if block if the condition is true otherwise execute else block
+
+3. if-else-if / if-else-if ladder: Tests multiple conditions sequentially and execute the true block.
+
+4. switch: Selects one block from multiple options based on a variable’s value. Directly choose the block with out checking each 
+            conditions like if-else-if ladder.
+
+Example:
+
+public class DecisionMakingDemo {
+    public static void main(String[] args) {
+        int number = 10;
+
+        // if statement
+        if (number > 0) {
+            System.out.println("The number is positive.");
+        }
+
+        // if-else statement
+        if (number % 2 == 0) {
+            System.out.println("The number is even.");
+        } else {
+            System.out.println("The number is odd.");
+        }
+
+        // if-else-if ladder
+        if (number < 0) {
+            System.out.println("The number is negative.");
+        } else if (number == 0) {
+            System.out.println("The number is zero.");
+        } else {
+            System.out.println("The number is positive.");
+        }
+
+        // switch statement
+        int day = 3;
+        switch (day) {
+            case 1:
+                System.out.println("Monday");
+                break;
+            case 2:
+                System.out.println("Tuesday");
+                break;
+            case 3:
+                System.out.println("Wednesday");
+                break;
+            default:
+                System.out.println("Other day");
+        }
+    }
+}
+
+Output:
+
+The number is positive.
+The number is even.
+The number is positive.
+Wednesday
+
+
+Loops in Java
+--------------
+Loops are control statements in Java that allow a block of code to be executed repeatedly as long as a specified condition is true. They
+help in reducing code repetition.
+
+There are 4 types of loops in Java.
+
+1. for: Used when the number of iterations is known.
+
+2. while: Used when the number of iterations is not known in advance, condition checked before each iteration.
+
+3. do-while: Similar to while loop, but condition is checked after executing the block (executes at least once).
+
+4. for-each: Used to iterate over arrays and collections.
+
+
+Example:
+
+public class LoopsDemo {
+    public static void main(String[] args) {
+
+        // 1. For loop
+        System.out.println("For Loop:");
+        for (int i = 1; i <= 5; i++) {
+            System.out.println("i = " + i);
+        }
+
+        // 2. While loop
+        System.out.println("\nWhile Loop:");
+        int j = 1;
+        while (j <= 5) {
+            System.out.println("j = " + j);
+            j++;
+        }
+
+        // 3. Do-While loop
+        System.out.println("\nDo-While Loop:");
+        int k = 1;
+        do {
+            System.out.println("k = " + k);
+            k++;
+        } while (k <= 5);
+
+        // 4. Enhanced For Loop (for-each loop)
+        System.out.println("\nEnhanced For Loop:");
+        int[] numbers = {10, 20, 30, 40, 50};
+        for (int num : numbers) {
+            System.out.println("num = " + num);
+        }
+    }
+}
+
+Output:
+
+For Loop:
+i = 1
+i = 2
+i = 3
+i = 4
+i = 5
+
+While Loop:
+j = 1
+j = 2
+j = 3
+j = 4
+j = 5
+
+Do-While Loop:
+k = 1
+k = 2
+k = 3
+k = 4
+k = 5
+
+Enhanced For Loop:
+num = 10
+num = 20
+num = 30
+num = 40
+num = 50
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
